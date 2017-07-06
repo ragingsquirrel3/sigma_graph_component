@@ -1,6 +1,6 @@
 {
-  "name": "webpack-boilerplate",
-  "version": "1.0.0",
+  "name": "sigma_graph_component",
+  "version": "0.0.1",
   "description": "",
   "main": "app.js",
   "scripts": {
@@ -8,8 +8,8 @@
     "dev": "npm run lint && webpack-dev-server --config webpack.dev.config.js --inline",
     "lint": "./node_modules/.bin/eslint js"
   },
-  "author": "Yang Zhao",
-  "license": "ISC",
+  "author": "Travis Sheppard",
+  "license": "MIT",
   "devDependencies": {
     "animate.css": "git+https://github.com/daneden/animate.css.git",
     "babel-core": "^6.7.2",
