@@ -20,7 +20,7 @@ class ExampleApp extends Component {
         category: 'dog'
       });
       let newI = this.state.i + 1;
-      this.setState({ data: newData });
+      this.setState({ data: newData, i: newI });
     }, 3000);
   }
 

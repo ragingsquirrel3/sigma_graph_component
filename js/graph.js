@@ -25,7 +25,7 @@ class Graph extends Component {
   componentDidUpdate (prevProps) {
     // see if stage changed
     let hasStage = typeof this.props.stage !== 'undefined';
-    let shouldUpdate = hasStage ? (prevProps.stage !== this.props.stage) : didDataChange(prevProps.data, this.props.data);
+    let shouldUpdate = hasStage ? (prevProps.stage !== this.props.stage) : this.didDataChange(prevProps.data, this.props.data);
     if (shouldUpdate) {
       this.drawGraph();
     }
