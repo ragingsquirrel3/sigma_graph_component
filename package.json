@@ -1,8 +1,9 @@
 {
   "name": "sigma_graph_component",
   "version": "0.0.1",
-  "description": "",
-  "main": "app.js",
+  "description": "react component to make sigma.js graphs",
+  "main": "js/graph.js",
+  "repository": "https://github.com/ragingsquirrel3/sigma_graph_component",
   "scripts": {
     "build": "npm run lint && webpack --config webpack.config.js -p",
     "dev": "npm run lint && webpack-dev-server --config webpack.dev.config.js --inline",
@@ -10,6 +11,13 @@
   },
   "author": "Travis Sheppard",
   "license": "MIT",
+  "dependencies": {
+    "d3": "^3.5.17"
+  },
+  "peerDependencies": {
+    "react": "^0.14 || ^15.0.0-rc || ^15.0",
+    "react-dom": "^0.14 || ^15.0.0-rc || ^15.0"
+  },
   "devDependencies": {
     "animate.css": "git+https://github.com/daneden/animate.css.git",
     "babel-core": "^6.7.2",
@@ -21,7 +29,6 @@
     "css-loader": "^0.23.1",
     "eslint": "^3.0.0",
     "extract-text-webpack-plugin": "^1.0.1",
-    "d3": "^3.5.17",
     "file-loader": "^0.8.5",
     "font-awesome": "^4.5.0",
     "jquery": "^2.2.2",

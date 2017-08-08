@@ -1,6 +1,35 @@
 # Sigma Graph Component
 
-### Install dependencies
+React component to control and animate a [sigma.js](http://sigmajs.org/) network diagram.
+
+### Usage
+
+```javascript
+var optional_data = { 
+  nodes: [
+    { 
+      id: 1,
+      name: 'hello',
+      category: 'dog'
+    },
+    {
+      id: 2,
+      name: 'world',
+      category: 'cat'
+    }
+  ],
+  edges: [
+    {
+      source: 1,
+      target: 2
+    }
+  ]
+};
+// a new stage forces the graph to animate update
+return <Graph data={optional_data} stage={0} />;
+```
+
+### Development, Install dependencies
 
 ```
 npm install
