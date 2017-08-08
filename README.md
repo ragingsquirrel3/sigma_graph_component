@@ -2,7 +2,7 @@
 
 React component to control and animate a [sigma.js](http://sigmajs.org/) network diagram.
 
-### Usage
+## Usage
 
 ```javascript
 var optional_data = { 
@@ -29,7 +29,7 @@ var optional_data = {
 return <Graph data={optional_data} stage={0} />;
 ```
 
-### Development, Install dependencies
+## Development, Install dependencies
 
 ```
 npm install
