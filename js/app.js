@@ -14,7 +14,7 @@ $(function() {
   /**
    * EXAMPLE JS STARTS
   */
-  let optional_data = { nodes: [{ id: 1, label: 'hello' }, { id: 2, label: 'world' }], edges: [{ source: 1, target: 2 }] };
+  let optional_data = { nodes: [{ id: 1, name: 'hello' }, { id: 2, name: 'world' }], edges: [{ source: 1, target: 2 }] };
   render(
     <Graph data={optional_data} />,
     document.getElementById(TARGET_EL_ID)
