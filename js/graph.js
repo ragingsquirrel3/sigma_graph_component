@@ -96,8 +96,6 @@ class Graph extends Component {
       // assign 'correct' to x2 y2
       let correctX = d.x;
       let correctY = d.y;
-      d.x2 = correctX;
-      d.y2 = correctY;
       // try to get old and assign to default x and y
       let oldNodes = this.lastNodes.filter( _d => d.id === _d.id );
       if (oldNodes.length) {
@@ -108,6 +106,8 @@ class Graph extends Component {
         d.x = DEFAULT_X;
         d.y = DEFAULT_Y;
       }
+      d.x2 = correctX;
+      d.y2 = correctY;
       return d;
     });
     this.lastNodes = nodes;
