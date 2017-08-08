@@ -128,8 +128,9 @@ class Graph extends Component {
       settings: {
         animationsTime: TRANSITION_DURATION,
         labelThreshold: 100,
-        minNodeSize: 0,
-        maxNodeSize: 3
+        minNodeSize: 5,
+        maxNodeSize: 5,
+        labelThreshold: 0
       }
     });
     sigma.plugins.animate(
@@ -143,7 +144,7 @@ class Graph extends Component {
 
   render() {
     return (
-      <div ref='container'>
+      <div ref='container' style={{ padding: '1rem' }}>
         <div id={TARGET_ID} style={{ height: this.getHeight() }} />
       </div>
     );
