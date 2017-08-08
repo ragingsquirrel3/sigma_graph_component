@@ -23,7 +23,10 @@ class Graph extends Component {
   }
 
   componentDidUpdate (prevProps) {
-    if (this.didDataChange(prevProps.data, this.props.data)) {
+    // see if stage changed
+    let hasStage = typeof this.props.stage !== 'undefined';
+    let shouldUpdate = hasStage ? (prevProps.stage !== this.props.stage) : didDataChange(prevProps.data, this.props.data);
+    if (shouldUpdate) {
       this.drawGraph();
     }
   }
@@ -64,9 +67,10 @@ class Graph extends Component {
   }
 
   getNodes() {
-    let colorScale = d3.scale.category10();
+    let defaultColorScale = d3.scale.category10();
+    let colorScale = this.props.colorScale || defaultColorScale;
     return this.props.data.nodes.map( (d) => {
-      d.color = colorScale(d.species);
+      d.color = colorScale(d.category);
       d.label = d.name;
       d.size = d.direct ? 1 : 0.5;
       return d;
@@ -152,7 +156,9 @@ class Graph extends Component {
 }
 
 Graph.propTypes = {
-  data: React.PropTypes.object // { nodes: [], edges: [] }
+  data: React.PropTypes.object, // { nodes: [], edges: [] }
+  colorScale: React.PropTypes.func, // optional, default to d3.scale.category10(d.category)
+  stage: React.PropTypes.number // optional to force animation 
 };
 
 export default Graph;

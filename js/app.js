@@ -6,17 +6,16 @@ import 'scrollTo';
 
 import React from 'react';
 import { render } from 'react-dom';
-import Graph from './graph';
+import ExampleApp from './ExampleApp';
 
 const TARGET_EL_ID = 'j-target';
 
 $(function() {
   /**
-   * EXAMPLE JS STARTS
+   * JS STARTS
   */
-  let optional_data = { nodes: [{ id: 1, name: 'hello' }, { id: 2, name: 'world' }], edges: [{ source: 1, target: 2 }] };
   render(
-    <Graph data={optional_data} />,
+    <ExampleApp />,
     document.getElementById(TARGET_EL_ID)
   );
   /**
