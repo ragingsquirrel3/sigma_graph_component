@@ -2,6 +2,8 @@
 
 React component to control and animate a [sigma.js](http://sigmajs.org/) network diagram.
 
+![sample not available](https://github.com/ragingsquirrel3/sigma_graph_component/blob/master/images/react_sigma_component_example.png)
+
 ## Usage
 
 ```javascript
