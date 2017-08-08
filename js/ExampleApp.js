@@ -17,7 +17,7 @@ class ExampleApp extends Component {
       newData.nodes.push({
         id: 3,
         name: 'hola',
-        category: 'dog'
+        category: 'perro'
       });
       let newI = this.state.i + 1;
       this.setState({ data: newData, i: newI });
