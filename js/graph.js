@@ -146,10 +146,25 @@ class Graph extends Component {
     );
   }
 
+  renderFooter() {
+    let footerText = this.props.footerText;
+    if (typeof footerText === 'string') {
+      return (
+        <div style={{ textAlign: 'right' }}>
+          <span>
+            {footerText}
+          </span>
+        </div>
+      );
+    }
+    return null;
+  }
+
   render() {
     return (
       <div ref='container' style={{ padding: '1rem' }}>
         <div id={TARGET_ID} style={{ height: this.getHeight() }} />
+        {this.renderFooter()}
       </div>
     );
   }
@@ -157,6 +172,7 @@ class Graph extends Component {
 
 Graph.propTypes = {
   data: React.PropTypes.object, // { nodes: [], edges: [] }
+  footerText: React.PropTypes.string, // optional
   colorScale: React.PropTypes.func, // optional, default to d3.scale.category10(d.category)
   stage: React.PropTypes.number // optional to force animation 
 };

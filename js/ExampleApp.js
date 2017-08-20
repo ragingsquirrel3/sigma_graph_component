@@ -25,7 +25,7 @@ class ExampleApp extends Component {
   }
 
   render() {
-    return <Graph data={this.state.data} stage={this.state.i} />;
+    return <Graph data={this.state.data} stage={this.state.i} footerText='Sigma.js Graph React Component Example'/>;
   }
 };
 
