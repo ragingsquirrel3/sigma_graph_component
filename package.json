@@ -1,6 +1,6 @@
 {
   "name": "sigma_graph_component",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "react component to make sigma.js graphs",
   "main": "js/graph.js",
   "repository": "https://github.com/ragingsquirrel3/sigma_graph_component",
